@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stay or Leave — Decide with the numbers, not just a gut feeling</title>
+  <meta name="description" content="Compare countries, cities, companies, and colleges across cost of living, safety, salary, and more — then read what people who actually made the move have to say.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <div class="split-line" aria-hidden="true"></div>
+
+  <header id="site-navbar" class="navbar" data-active="index.html"></header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div>
+          <span class="hero__eyebrow">For anyone weighing a big move</span>
+          <h1 class="hero__title">Should you <em>stay</em>, or should you <em>leave</em>?</h1>
+          <p class="hero__lede">
+            Stay or Leave puts two countries, cities, companies, or colleges side by side —
+            cost of living, salary, safety, healthcare, and more — so the decision is backed
+            by data, not just a feeling.
+          </p>
+
+          <form class="hero__search" role="search" id="hero-search-form">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input type="text" id="hero-search-input" placeholder="Try “Canada vs Germany”" aria-label="Search places to compare">
+            <button type="submit" class="btn btn--primary btn--sm">Compare now</button>
+          </form>
+        </div>
+
+        <div class="scale" aria-hidden="true">
+          <div class="scale__fulcrum"></div>
+          <div class="scale__beam"></div>
+          <div class="scale__pan scale__pan--stay">
+            <strong>Stay</strong>
+            <span>known ground</span>
+          </div>
+          <div class="scale__pan scale__pan--leave">
+            <strong>Leave</strong>
+            <span>new ground</span>
+          </div>
+          <div class="scale__base"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS ===================== -->
+    <section class="section section--tight" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <div class="stat-num">128</div>
+            <div class="stat-label">Places tracked worldwide</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">23</div>
+            <div class="stat-label">Comparable factors</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">9.4k</div>
+            <div class="stat-label">Real experiences shared</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">41k</div>
+            <div class="stat-label">Comparisons run this year</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED COMPARISONS ===================== -->
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Trending right now</span>
+        <h2 class="section-title reveal">Featured comparisons</h2>
+        <p class="section-lede reveal">The match-ups people are running most this month.</p>
+
+        <div class="compare-cards" id="featured-comparisons">
+          <!-- Populated by js/home.js; static fallback cards below render until JS loads -->
+          <div class="card compare-card reveal">
+            <div class="compare-card__sides">
+              <span class="compare-card__side">Canada</span>
+              <span class="compare-card__vs">vs</span>
+              <span class="compare-card__side">Germany</span>
+            </div>
+            <p class="compare-card__rec">Recommendation: <strong>Canada</strong> — stronger on healthcare and safety.</p>
+          </div>
+          <div class="card compare-card reveal">
+            <div class="compare-card__sides">
+              <span class="compare-card__side">Singapore</span>
+              <span class="compare-card__vs">vs</span>
+              <span class="compare-card__side">Australia</span>
+            </div>
+            <p class="compare-card__rec">Recommendation: <strong>Australia</strong> — better pollution and happiness scores.</p>
+          </div>
+          <div class="card compare-card reveal">
+            <div class="compare-card__sides">
+              <span class="compare-card__side">United States</span>
+              <span class="compare-card__vs">vs</span>
+              <span class="compare-card__side">Canada</span>
+            </div>
+            <p class="compare-card__rec">Recommendation: <strong>Canada</strong> — wins on healthcare and safety.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== POPULAR PLACES ===================== -->
+    <section class="section" id="popular">
+      <div class="container">
+        <span class="eyebrow">Most compared</span>
+        <h2 class="section-title reveal">Popular countries</h2>
+        <p class="section-lede reveal">Start from a place others are already considering.</p>
+
+        <div class="places-grid" id="popular-places">
+          <a href="comparison.html?a=canada" class="place-tile reveal">
+            <div class="place-tile__label">Canada</div>
+          </a>
+          <a href="comparison.html?a=germany" class="place-tile reveal">
+            <div class="place-tile__label">Germany</div>
+          </a>
+          <a href="comparison.html?a=australia" class="place-tile reveal">
+            <div class="place-tile__label">Australia</div>
+          </a>
+          <a href="comparison.html?a=singapore" class="place-tile reveal">
+            <div class="place-tile__label">Singapore</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">From the community</span>
+        <h2 class="section-title reveal">People who already made the call</h2>
+        <p class="section-lede reveal">Real experiences from people who stayed, and people who left.</p>
+
+        <div class="testimonial-track">
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__quote">The healthcare comparison alone changed our minds about the move. Two years in Toronto now and it was the right call for our family.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar"></div>
+              Jordan P. — moved to Canada
+            </div>
+          </div>
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-card__stars">★★★★☆</div>
+            <p class="testimonial-card__quote">Cost of living numbers were spot on. Berlin is cheaper than I expected coming from London, and the data backed that up before I committed.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar"></div>
+              Amara K. — moved to Germany
+            </div>
+          </div>
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__quote">I almost left my company for a competitor. Comparing the offers side by side showed the work-life balance difference wasn't worth the salary bump.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar"></div>
+              Devon R. — stayed at current company
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow">Good to know</span>
+        <h2 class="section-title reveal">Frequently asked questions</h2>
+
+        <div class="faq-list">
+          <div class="faq-item reveal" data-open="false">
+            <button class="faq-item__q" aria-expanded="false">
+              Where does the comparison data come from?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-item__a">We pull from public economic, safety, and quality-of-life indexes, then keep each factor on its own page so you can see exactly what's being compared and why.</div>
+          </div>
+          <div class="faq-item reveal" data-open="false">
+            <button class="faq-item__q" aria-expanded="false">
+              Can I compare companies and colleges, not just countries?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-item__a">Yes — the comparison tool works the same way for countries, cities, companies, and colleges. Pick the type on the Compare page.</div>
+          </div>
+          <div class="faq-item reveal" data-open="false">
+            <button class="faq-item__q" aria-expanded="false">
+              Is the recommendation final, or just a starting point?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-item__a">Just a starting point. The recommendation weighs every factor equally — your own priorities might weigh some far more than others, so use it as a conversation starter, not a verdict.</div>
+          </div>
+          <div class="faq-item reveal" data-open="false">
+            <button class="faq-item__q" aria-expanded="false">
+              Do I need an account to compare places?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-item__a">No — comparisons are free and open to everyone. Create an account if you want to save comparisons, leave reviews, or bookmark places.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place — Stay or Leave</title>
+  <meta name="description" content="Read real experiences and see the numbers for a country, city, company, or college on Stay or Leave.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/place.css">
+</head>
+<body>
+  <div class="split-line" aria-hidden="true"></div>
+  <header id="site-navbar" class="navbar" data-active="comparison.html"></header>
+
+  <main>
+    <section class="section section--tight">
+      <div class="container">
+        <div id="place-header">
+          <span class="eyebrow">Loading…</span>
+          <h1 class="section-title reveal" id="place-name">&nbsp;</h1>
+        </div>
+
+        <div class="place-actions reveal">
+          <a class="btn btn--ghost btn--sm" id="compare-link" href="comparison.html">Compare this place</a>
+          <button class="btn btn--ghost btn--sm" id="write-review-btn">Write a review</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <span class="eyebrow">At a glance</span>
+        <h2 class="section-title reveal">The numbers</h2>
+        <div class="metrics-grid" id="metrics-grid">
+          <p style="color:var(--text-dim);">Loading metrics…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="review-form-section" hidden>
+      <div class="container">
+        <div class="card review-form-card reveal">
+          <h3>Share your experience</h3>
+          <form id="review-form" novalidate>
+            <div class="field" id="review-title-field">
+              <label for="review-title">Title</label>
+              <input type="text" id="review-title" placeholder="Sum up your experience in a few words" required>
+              <p class="field-error">Title needs to be at least 3 characters</p>
+            </div>
+
+            <div class="field" id="review-rating-field">
+              <label>Your rating</label>
+              <div class="star-rating" id="review-star-rating" role="radiogroup" aria-label="Rating">
+                <button type="button" data-value="1" aria-label="1 star">★</button>
+                <button type="button" data-value="2" aria-label="2 stars">★</button>
+                <button type="button" data-value="3" aria-label="3 stars">★</button>
+                <button type="button" data-value="4" aria-label="4 stars">★</button>
+                <button type="button" data-value="5" aria-label="5 stars">★</button>
+              </div>
+              <input type="hidden" id="review-rating" value="">
+              <p class="field-error">Pick a rating from 1 to 5</p>
+            </div>
+
+            <div class="field" id="review-body-field">
+              <label for="review-body">Your experience</label>
+              <textarea id="review-body" rows="5" placeholder="What was it actually like? What surprised you?" required></textarea>
+              <p class="field-error">Tell us a bit more — at least 10 characters</p>
+            </div>
+
+            <div style="display:flex; gap:var(--space-3);">
+              <button type="submit" class="btn btn--primary" id="review-submit-btn">Post review</button>
+              <button type="button" class="btn btn--ghost" id="review-cancel-btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="reviews-head">
+          <div>
+            <span class="eyebrow">From the community</span>
+            <h2 class="section-title reveal">Reviews &amp; experiences</h2>
+          </div>
+          <div class="reviews-controls">
+            <input type="search" id="review-search" placeholder="Search reviews">
+            <select id="review-sort">
+              <option value="newest">Newest</option>
+              <option value="highest_rated">Highest rated</option>
+              <option value="most_helpful">Most helpful</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="reviews-list">
+          <p style="color:var(--text-dim);">Loading reviews…</p>
+        </div>
+
+        <div style="text-align:center; margin-top:var(--space-6);">
+          <button class="btn btn--ghost" id="load-more-btn" hidden>Load more</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/place.js"></script>
+</body>
+</html>

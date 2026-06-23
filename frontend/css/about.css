@@ -1,0 +1,69 @@
+/* ============================================================
+   Stay or Leave — About page styles
+   ============================================================ */
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+.mission-grid .card { padding: var(--space-7); }
+.mission-grid h3 { font-size: 1.3rem; margin-bottom: var(--space-3); }
+.mission-grid p { color: var(--text-dim); }
+
+/* ---- Timeline ---- */
+.timeline { position: relative; padding-left: var(--space-6); }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px; top: 6px; bottom: 6px;
+  width: 1px;
+  background: var(--line);
+}
+.timeline-item { position: relative; padding-bottom: var(--space-7); }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -29px; top: 4px;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--leave);
+}
+.timeline-item__year { font-family: var(--font-mono); font-size: 0.8rem; color: var(--leave); margin-bottom: var(--space-1); display: block; }
+.timeline-item h4 { font-size: 1.1rem; margin-bottom: var(--space-2); }
+.timeline-item p { color: var(--text-dim); font-size: 0.92rem; max-width: 520px; }
+
+/* ---- Team ---- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+.team-card { text-align: center; }
+.team-card__avatar {
+  width: 84px; height: 84px;
+  border-radius: 50%;
+  margin: 0 auto var(--space-4);
+  background: linear-gradient(135deg, var(--stay), var(--leave));
+}
+.team-card h4 { font-size: 1.05rem; margin-bottom: 2px; }
+.team-card .role { color: var(--text-dim); font-size: 0.85rem; }
+
+/* ---- Why us / features ---- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+.feature-card svg { width: 28px; height: 28px; stroke: var(--leave); margin-bottom: var(--space-4); }
+.feature-card h4 { font-size: 1.05rem; margin-bottom: var(--space-2); }
+.feature-card p { color: var(--text-dim); font-size: 0.9rem; }
+
+@media (max-width: 900px) {
+  .mission-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .feature-grid { grid-template-columns: 1fr; }
+}

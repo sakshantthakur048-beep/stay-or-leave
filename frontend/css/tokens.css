@@ -1,0 +1,83 @@
+/* ============================================================
+   Stay or Leave — Design Tokens
+   The whole site reduces to a single idea: every decision is a
+   balance between two sides. The vertical divider that splits the
+   hero scale also splits the comparison table, the nav underline,
+   and the footer — one motif, reused with restraint.
+   ============================================================ */
+
+:root {
+  /* ---- Color: dark (default) ---- */
+  --ink:            #0F1729;   /* base background, dark mode */
+  --ink-raised:     #161F36;   /* cards, raised surfaces */
+  --ink-line:       #2A3550;   /* hairlines, borders */
+  --parchment:      #F7F3EC;   /* base background, light mode */
+  --parchment-raised: #FFFFFF;
+  --parchment-line: #E3DCCB;
+
+  --stay:           #E8A33D;   /* amber — "stay" side */
+  --stay-soft:      #F3C57A;
+  --leave:          #2E8B8B;   /* teal — "leave" side */
+  --leave-soft:     #5FB3B3;
+
+  --ink-text:       #EDEAE2;   /* primary text, dark mode */
+  --ink-text-dim:   #A3ABC2;   /* secondary text, dark mode */
+  --parchment-text: #1B2333;   /* primary text, light mode */
+  --parchment-text-dim: #5B6472;
+
+  --danger:         #D1495B;
+  --success:        #4F9D69;
+
+  /* ---- Type ---- */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+  /* ---- Spacing scale ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+
+  /* ---- Radius / shadow ---- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-soft: 0 8px 30px rgba(15, 23, 41, 0.12);
+  --shadow-deep: 0 20px 60px rgba(15, 23, 41, 0.35);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 160ms;
+  --dur-med: 360ms;
+  --dur-slow: 700ms;
+
+  /* ---- Active theme bindings (light mode = default root) ---- */
+  --bg: var(--parchment);
+  --bg-raised: var(--parchment-raised);
+  --line: var(--parchment-line);
+  --text: var(--parchment-text);
+  --text-dim: var(--parchment-text-dim);
+}
+
+[data-theme="dark"] {
+  --bg: var(--ink);
+  --bg-raised: var(--ink-raised);
+  --line: var(--ink-line);
+  --text: var(--ink-text);
+  --text-dim: var(--ink-text-dim);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

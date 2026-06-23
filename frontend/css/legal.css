@@ -1,0 +1,23 @@
+/* ============================================================
+   Stay or Leave — Legal document pages (privacy, terms)
+   ============================================================ */
+
+.legal-doc {
+  max-width: 720px;
+}
+.legal-updated {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-6);
+  font-family: var(--font-mono);
+}
+.legal-doc p {
+  color: var(--text-dim);
+  margin-bottom: var(--space-4);
+}
+.legal-doc h2 {
+  font-size: 1.25rem;
+  margin-top: var(--space-7);
+  margin-bottom: var(--space-3);
+}
+.legal-doc a { color: var(--leave); font-weight: 600; }

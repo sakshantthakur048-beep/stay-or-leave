@@ -1,0 +1,101 @@
+/* ============================================================
+   Stay or Leave — Auth pages (login / signup / reset)
+   ============================================================ */
+
+.auth-wrap {
+  min-height: calc(100vh - 140px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.auth-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-7) var(--space-5);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-card h1 { font-size: 1.9rem; margin-bottom: var(--space-2); }
+.auth-card .auth-sub { color: var(--text-dim); margin-bottom: var(--space-7); font-size: 0.95rem; }
+
+.auth-card .auth-foot {
+  text-align: center;
+  margin-top: var(--space-6);
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+.auth-card .auth-foot a { color: var(--leave); font-weight: 600; }
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-6) 0;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+}
+.auth-divider::before, .auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.auth-visual {
+  position: relative;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--stay) 18%, var(--ink)), color-mix(in srgb, var(--leave) 18%, var(--ink)));
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-8);
+  overflow: hidden;
+}
+.auth-visual__quote {
+  color: #F7F3EC;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.4;
+  max-width: 420px;
+  position: relative;
+  z-index: 1;
+}
+.auth-visual__quote cite {
+  display: block;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 0.85rem;
+  color: rgba(247,243,236,0.7);
+  margin-top: var(--space-4);
+}
+.auth-visual__divider {
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 1px;
+  background: rgba(247,243,236,0.15);
+}
+
+.password-strength {
+  display: flex;
+  gap: 4px;
+  margin-top: var(--space-2);
+}
+.password-strength i {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--line);
+  transition: background var(--dur-fast) var(--ease-out);
+}
+.password-strength.weak i:nth-child(1) { background: var(--danger); }
+.password-strength.medium i:nth-child(1),
+.password-strength.medium i:nth-child(2) { background: var(--stay); }
+.password-strength.strong i { background: var(--success); }
+
+@media (max-width: 900px) {
+  .auth-wrap { grid-template-columns: 1fr; }
+  .auth-visual { display: none; }
+}

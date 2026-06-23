@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in — Stay or Leave</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <header id="site-navbar" class="navbar" data-active="login.html"></header>
+
+  <main class="auth-wrap">
+    <div class="auth-panel">
+      <div class="auth-card">
+        <h1>Welcome back</h1>
+        <p class="auth-sub">Log in to bookmark comparisons, write reviews, and pick up where you left off.</p>
+
+        <form id="login-form" novalidate>
+          <div class="field" id="email-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <p class="field-error">Enter a valid email address</p>
+          </div>
+
+          <div class="field" id="password-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required autocomplete="current-password">
+            <p class="field-error">Enter your password</p>
+          </div>
+
+          <div style="display:flex; justify-content:flex-end; margin-bottom: var(--space-5);">
+            <a href="forgot-password.html" style="font-size:0.85rem; color:var(--leave); font-weight:600;">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block" id="login-submit-btn">Log in</button>
+        </form>
+
+        <p class="auth-foot">Don't have an account? <a href="signup.html">Sign up</a></p>
+      </div>
+    </div>
+
+    <div class="auth-visual" aria-hidden="true">
+      <div class="auth-visual__divider"></div>
+      <blockquote class="auth-visual__quote">
+        "We don't tell you what to choose. We just make sure you can see both sides clearly before you do."
+        <cite>— The Stay or Leave team</cite>
+      </blockquote>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

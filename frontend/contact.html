@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Stay or Leave</title>
+  <meta name="description" content="Get in touch with the Stay or Leave team.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <div class="split-line" aria-hidden="true"></div>
+  <header id="site-navbar" class="navbar" data-active="contact.html"></header>
+
+  <main>
+    <section class="section section--tight">
+      <div class="container">
+        <span class="eyebrow">We'd love to hear from you</span>
+        <h1 class="section-title reveal">Get in touch</h1>
+        <p class="section-lede reveal">Questions, feedback, a place we're missing — send it over and a real person will get back to you.</p>
+
+        <div class="contact-grid">
+          <div class="card reveal">
+            <h3 style="margin-bottom:var(--space-5);">Send a message</h3>
+            <form id="contact-form" novalidate>
+              <div class="field" id="name-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+                <p class="field-error">Enter your name</p>
+              </div>
+              <div class="field" id="email-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <p class="field-error">Enter a valid email address</p>
+              </div>
+              <div class="field" id="subject-field">
+                <label for="subject">Subject (optional)</label>
+                <input type="text" id="subject">
+              </div>
+              <div class="field" id="message-field">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" required></textarea>
+                <p class="field-error">Message is too short</p>
+              </div>
+              <button type="submit" class="btn btn--primary btn--block" id="contact-submit-btn">Send message</button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <div class="card reveal contact-info__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <div>
+                <h4>Phone</h4>
+                <p>+1 (555) 014-2398</p>
+              </div>
+            </div>
+            <div class="card reveal contact-info__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+              <div>
+                <h4>Email</h4>
+                <p>hello@stayorleave.com</p>
+              </div>
+            </div>
+            <div class="card reveal contact-info__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <h4>Address</h4>
+                <p>148 Market Street, Suite 400<br>San Francisco, CA 94103</p>
+              </div>
+            </div>
+
+            <div class="card reveal map-embed">
+              <iframe
+                title="Office location map"
+                src="https://maps.google.com/maps?q=148%20Market%20Street%20San%20Francisco&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+            <div class="card reveal">
+              <h4 style="margin-bottom:var(--space-3);">Follow us</h4>
+              <div class="footer__socials" style="justify-content:flex-start;">
+                <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 8v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A6.13 6.13 0 0023 3z"/></svg></a>
+                <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+                <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4V8h4v1.5A5 5 0 0116 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <!-- Live chat widget (lightweight, in-house — no third-party script needed) -->
+  <button id="live-chat-toggle" class="live-chat-toggle" aria-label="Open live chat">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+  </button>
+  <div id="live-chat-panel" class="live-chat-panel" hidden>
+    <div class="live-chat-panel__head">
+      <strong>Stay or Leave Support</strong>
+      <button id="live-chat-close" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="live-chat-panel__body" id="live-chat-body">
+      <div class="live-chat-msg live-chat-msg--bot">Hi! Ask us anything about comparisons, reviews, or your account — a real person typically replies within a few hours.</div>
+    </div>
+    <form id="live-chat-form" class="live-chat-panel__form">
+      <input type="text" id="live-chat-input" placeholder="Type a message…" autocomplete="off">
+      <button type="submit" class="btn btn--primary btn--sm">Send</button>
+    </form>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
